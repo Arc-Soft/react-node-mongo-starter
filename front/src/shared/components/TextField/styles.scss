@@ -1,0 +1,53 @@
+@import "src/assets/styles/colors";
+.textField {
+  position: relative;
+  margin-bottom: 10px;
+  &__error {
+    font-size: 12px;
+    color: $color-red;
+  }
+  &--noMarginTop {
+    margin-top: 25px;
+  }
+  &__label {
+    color: #7a8994;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    pointer-events: none;
+    display: block;
+    transition: 0.3s ease all;
+    &--active {
+      color: $color-primary;
+    }
+  }
+  &__input {
+    font-size: 14px;
+    padding: 8px 12px;
+    color: $color-medium-grey;
+    border: 1px solid #ededed;
+    display: block;
+    width: 100%;
+    margin: none;
+    transition: background-color 0.2;
+    &--disabled {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 30px transparent inset;
+    }
+    &--textarea {
+      line-height: 16px;
+      height: auto;
+      min-height: 16px;
+      resize: none;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      display: block;
+    }
+  }
+}

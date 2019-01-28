@@ -1,0 +1,194 @@
+FORMAT: 1A9
+
+# Client
+
+## Get all clients [GET /clients]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTRjN2MzNTcxNGZhZDczM2Y3IiwiZXhwIjoxNTM2MzI3MTI0LCJpYXQiOjE1MzM2NDg3MjR9.rRJbaUimOKBhj7C0fR4PmTyH2-BXcUKQakwBsuqz0g8
+
++ Response 200 (application/json)
+
+    + Attributes (array)
+        + (object)
+            + `_id`: 5b699f54c7c35714fad733f8
+            + user: 5b699f54c7c35714fad733f7
+            + `__v`: 0 (number)
+
+## Get client profile [GET /clients/profile]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTRjN2MzNTcxNGZhZDczM2Y5IiwiZXhwIjoxNTM2MzI3MTI1LCJpYXQiOjE1MzM2NDg3MjV9.tIKzDp2G8SV_aHHuRgOd4OKj3J3K7o5FggX7-QRYLEw
+
++ Response 200 (application/json)
+
+    + Attributes
+        + `_id`: 5b699f54c7c35714fad733fa
+        + user: 5b699f54c7c35714fad733f9
+        + `__v`: 0 (number)
+
+# Diet plan
+
+## Create diet plan [POST /diet-plan]
+
++ Request Diet plan (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTVjN2MzNTcxNGZhZDczM2ZiIiwiZXhwIjoxNTM2MzI3MTI1LCJpYXQiOjE1MzM2NDg3MjV9.LVmd8o1FwjyiDPZpaTK3XwlDFqT7A3I01zDouJtJFqw
+
+    + Attributes
+        + `description`: 4KZJPKTy3f7hA5X7WxQS
+
++ Response 200 (application/json)
+
+    + Attributes
+        + `_id`: 5b699f55c7c35714fad733fd
+        + `description`: 4KZJPKTy3f7hA5X7WxQS
+        + trainer: 5b699f55c7c35714fad733fc
+        + `__v`: 0 (number)
+
+## Get diet plans for trainer [GET /diet-plan]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTVjN2MzNTcxNGZhZDczM2ZlIiwiZXhwIjoxNTM2MzI3MTI1LCJpYXQiOjE1MzM2NDg3MjV9.0u057byHdqVv1F7l51xLDKrC8Po6Hp7LeXF67v3wOeQ
+
++ Response 200 (application/json)
+
+    + Attributes (array)
+        + (object)
+            + `_id`: 5b699f55c7c35714fad73400
+            + `description`: SmEcCyWN0f
+            + trainer: 5b699f55c7c35714fad733ff
+            + `__v`: 0 (number)
+
+## Assign diet plan to client [PUT /diet-plan/assign-client]
+
++ Request Client to assign (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTVjN2MzNTcxNGZhZDczNDAxIiwiZXhwIjoxNTM2MzI3MTI1LCJpYXQiOjE1MzM2NDg3MjV9.wRJueXs0qJeLnNv0pmdvEk0QcmFempBOC_K86gnQtfQ
+
+    + Attributes
+        + planId: 5b699f55c7c35714fad73403
+        + clientId: 5b699f55c7c35714fad73405
+
++ Response 200 (application/json)
+
+    + Attributes
+        + `_id`: 5b699f55c7c35714fad73403
+        + `description`: YZf3q9JA0b
+        + trainer: 5b699f55c7c35714fad73402
+        + `__v`: 0 (number)
+        + client: 5b699f55c7c35714fad73405
+
+# Trainer
+
+## Assign client to trainer [PUT /trainers/assign-client]
+
++ Request Client to assign (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTVjN2MzNTcxNGZhZDczNDA2IiwiZXhwIjoxNTM2MzI3MTI1LCJpYXQiOjE1MzM2NDg3MjV9.E5oXjwitnT2fSyKbbsmtvMrjyMEfDdUcw53fQk0Qc_A
+
+    + Attributes
+        + clientId: 5b699f55c7c35714fad73409
+
++ Response 200 (application/json)
+
+    + Attributes
+        + clients (array)
+            + 5b699f55c7c35714fad73409
+        + `_id`: 5b699f55c7c35714fad73407
+        + user: 5b699f55c7c35714fad73406
+        + `__v`: 0 (number)
+
+## Get trainer profile [GET /trainers/profile]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTZjN2MzNTcxNGZhZDczNDBhIiwiZXhwIjoxNTM2MzI3MTI2LCJpYXQiOjE1MzM2NDg3MjZ9.GPiJdtVcosSPZH45MTp_0JxpKmIHzibPJAVhbNmghpw
+
++ Response 200 (application/json)
+
+    + Attributes
+        + clients (array)
+        + `_id`: 5b699f56c7c35714fad7340b
+        + user: 5b699f56c7c35714fad7340a
+        + `__v`: 0 (number)
+
+## Get trainer clients [GET /trainers/clients]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTZjN2MzNTcxNGZhZDczNDBjIiwiZXhwIjoxNTM2MzI3MTI2LCJpYXQiOjE1MzM2NDg3MjZ9.It_L87viGsei6fbfTTr2RViTayv1dopJA9BzlPIm0bU
+
++ Response 200 (application/json)
+
+    + Attributes (array)
+        + (object)
+            + `_id`: 5b699f56c7c35714fad7340f
+            + user: 5b699f56c7c35714fad7340e
+            + `__v`: 0 (number)
+
+## Get trainer specific client [GET /trainers/clients/5b699f56c7c35714fad73413]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTZjN2MzNTcxNGZhZDczNDEwIiwiZXhwIjoxNTM2MzI3MTI2LCJpYXQiOjE1MzM2NDg3MjZ9._eq7r72sudF54AuoKaQOC7Tt6o5XgXp62G3ZzcC54gE
+
++ Response 200 (application/json)
+
+    + Attributes
+        + `_id`: 5b699f56c7c35714fad73413
+        + user: 5b699f56c7c35714fad73412
+        + `__v`: 0 (number)
+
+# Users
+
+## Register user [POST /user]
+
++ Request Available types: client, trainer (application/json)
+
+    + Attributes
+        + email: ycuU6@ZOoY.5qi
+        + password: E0brK
+        + type: client
+
++ Response 200 (application/json)
+
+    + Attributes
+        + `_id`: 5b699f56c7c35714fad73415
+        + user: 5b699f56c7c35714fad73414
+        + `__v`: 0 (number)
+
+## Login user [POST /login]
+
++ Request Login and password (application/json)
+
+    + Attributes
+        + email: YNk1K@h08Q.csE
+        + password: SXsAW
+
++ Response 200 (application/json)
+
+    + Attributes
+        + token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWI2OTlmNTZjN2MzNTcxNGZhZDczNDE2IiwiZXhwIjoxNTM2MzI3MTI3LCJpYXQiOjE1MzM2NDg3Mjd9.US8HPdl9wmy5--GKYIUwoilqpEDDrZLodC3Aiq3zvCU`
+

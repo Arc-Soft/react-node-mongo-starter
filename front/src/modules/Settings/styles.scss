@@ -1,0 +1,18 @@
+@import 'src/assets/styles/colors';
+.Settings {
+  &__links {
+    margin-bottom: 30px;
+  }
+  &__link {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    background: $color-primary;
+    font-weight: 300;
+    transition: all 0.3s;
+    &:hover {
+      background: white;
+      color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import 'src/assets/styles/colors';
+.button {
+  padding: 3px;
+  border: none;
+  outline: none;
+  background: $color-primary;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: 300;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:disabled {
+    opacity: 0.6;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--default {
+    color: $color-light4-grey;
+    background-color: $color-white;
+    border-color: $color-light-grey;
+    border-style: solid;
+    border-width: 1px;
+    &:hover:not(:disabled) {
+      background-color: rgba($color-light-grey, 0.3);
+    }
+  }
+  &--primary {
+    background-color: #48b0f7;
+    // background-color: $color-primary;
+    border-color: transparent;
+    &:hover {
+      background-color: rgba(#6cc0f9, 0.7);
+      // background-color: rgba($color-primary, 0.7);
+    }
+  }
+  &--green {
+    background: $color-green;
+  }
+  &--red {
+    background: $color-red;
+  }
+  &--blue {
+    background: $color-blue;
+  }
+  &--yellow {
+    background: $color-yellow;
+  }
+  &--white {
+    color: #5e5e5e;
+    background-color: #fff;
+    border:  1px solid #f0f0f0;
+  }
+
+  &__loader {
+    &--primary {
+      // border-color: $color-primary !important;
+      border-color: white !important;
+      border-bottom-color: transparent !important;
+    }
+    &--active {
+      width: 13px;
+      height: 13px;
+      margin-left: 5px;
+      border: 2px solid #fff;
+      border-bottom-color: transparent;
+    }
+    width: 0;
+    animation-iteration-count: 3;
+    height: 0;
+    margin: 0;
+    animation-fill-mode: both;
+    display: inline-block;
+    transition: all 0.3s;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 100%;
+    animation-duration: 1s;
+    background: transparent !important;
+    animation: rotate 0.75s 0s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg)
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

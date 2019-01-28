@@ -1,0 +1,21 @@
+@import 'src/assets/styles/colors';
+.Notification {
+  padding: 10px 15px;
+  max-height: 50px;
+  transition: all 0.3s;
+  overflow: hidden;
+  &--hidden {
+    max-height: 0px;
+    padding: 0;
+  }
+  &--error {
+    border: 1px solid $color-dark-red;
+    background: $color-red;
+    color: white;
+  }
+  &--success {
+    border: 1px solid $color-dark-green;
+    background: $color-green;
+    color: white;
+  }
+}

@@ -1,0 +1,122 @@
+@import "src/assets/styles/colors";
+.login {
+  background: #121317;
+  height: 100%;
+  width: 100%; // position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__error {
+    background-color: #fddddd;
+    color: #933432;
+    border-color: #933432;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 9px 19px 9px 15px;
+    border-radius: 3px;
+    font-size: 13px;
+    border-width: 0;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  &__right {
+    width: 496px;
+    display: flex;
+    position: relative;
+    float: right;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    height: 100%;
+    padding: 40px 50px;
+  }
+  &__left {
+    background-image: url(../../../../assets/images/auth_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__bg {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index:2;
+    }
+    h1 {
+      font-weight: 100;
+      font-size: 3.125rem;
+      line-height: 60px;
+      z-index: 4;
+      margin: 10px 0;
+      text-align: center;
+      span {
+        font-weight: 300;
+        color: $color-primary;
+      }
+    }
+    p {
+      z-index: 4;
+      font-size: 89%;
+      line-height: 17px;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+
+  }
+  &__input-wrapper {
+    border: 1px solid #ededed;
+    padding: 7px 12px;
+    label {
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    .textField.login__input {
+      margin-bottom: 0 !important;
+    }
+    input {
+      background-color: transparent !important;
+      padding-left: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 13px;
+      line-height: 20px;
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+        background-color: transparent !important;
+      }
+      border: none !important;
+    }
+    margin-bottom: 15px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    &__title {
+      font-size: 30px;
+      font-weight: 300;
+      color: #979696;
+      font-size: 13px;
+      line-height: 20px;
+      padding-top: 35px !important;
+    }
+    &__logo {
+      height: 50px;
+    }
+  }
+}

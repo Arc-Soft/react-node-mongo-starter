@@ -1,0 +1,17 @@
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px 0px;
+  &__logo {
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+  }
+  &__expiration {
+    margin-top: auto;
+    color: #c8c8c8;
+    font-weight: 300;
+    padding: 15px;
+  }
+}

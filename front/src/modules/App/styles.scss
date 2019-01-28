@@ -1,0 +1,21 @@
+@import "src/assets/styles/colors";
+.App {
+  padding-top: 15px;
+  &__wrapper {
+    width: 80%;
+    max-width: 1080px;
+    background: white;
+    margin: auto;
+    display: flex;
+    min-height: 600px;
+    padding: 20px 0;
+  }
+  &__sidebar {
+    width: 300px;
+    border-right: 1px solid $color-light-grey;
+  }
+  &__content {
+    padding: 20px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+@import 'src/assets/styles/colors';
+
+.AuthLink {
+  &__link {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
