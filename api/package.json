@@ -1,6 +1,6 @@
 {
-  "name": "fitapp-backend",
-  "version": "1.0.0",
+  "name": "api",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/server.js",
   "scripts": {
